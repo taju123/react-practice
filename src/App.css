@@ -1,38 +1,59 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap");
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.main_container {
+  display: grid;
+  place-items: center;
+  padding: 100px 5%;
+}
+.sub_container {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sub_container img{
+  width: 120px;
+}
+.sub_container > p{
+  margin-top: 10px;
+}
+h1.title {
+  margin-top: 20px;
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.clock_main_container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid #000;
+  margin-top: 3em;
+  border-radius: 3px;
+  /* color: #fff; */
 }
 
-.App-link {
-  color: #61dafb;
+.clock_main_container div {
+  padding: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner_area {
+  border-right: 1px solid #000;
+}
+
+.inner_area:last-child {
+  border: none;
+}
+
+.inner_area p, .inner_area ~ span {
+  font-size: 38px;
+}
+
+.inner_area p small {
+  font-size: 16px;
 }
